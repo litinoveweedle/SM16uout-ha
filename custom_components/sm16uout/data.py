@@ -3,7 +3,7 @@ LINK="https://sequentmicrosystems.com/products/sixteen-0-10v-analog-outputs"
 
 import SM16uout
 API = SM16uout.SM16uout
-DOMAIN = "SM16uout"
+DOMAIN = "sm16uout"
 NAME_PREFIX = "sm16uo"
 SM_MAP = {
     "switch": {
