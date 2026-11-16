@@ -6,6 +6,16 @@ API = SM16uout.SM16uout
 DOMAIN = "sm16uout"
 NAME_PREFIX = "sm16uo"
 SM_MAP = {
+    "button": {
+        "watchdog_reload": {
+            "chan_no": 1, "optional": True, "com": {"set": "wdt_reload"},
+        },
+    },
+    "sensor": {
+        "watchdog_count": {
+            "chan_no": 1, "optional": True, "com": {"get": "wdt_get_reset_count"},
+        },
+    },
     "switch": {
         "led": {
                 "chan_no": 16,
@@ -16,6 +26,16 @@ SM_MAP = {
         }
     },
     "number": {
+        "watchdog_period": {
+            "chan_no": 1, "optional": True, "uom": "s",
+            "min_value": 1, "max_value": 65535, "step": 1,
+            "com": {"get": "wdt_get_period", "set": "wdt_set_period"},
+        },
+        "watchdog_initial": {
+            "chan_no": 1, "optional": True, "uom": "s",
+            "min_value": 1, "max_value": 65535, "step": 1,
+            "com": {"get": "wdt_get_init_period", "set": "wdt_set_init_period"},
+        },
         "out": {
                 "chan_no": 16,
                 "uom": "V",

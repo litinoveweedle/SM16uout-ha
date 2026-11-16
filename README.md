@@ -142,6 +142,15 @@ Entity options:
 - `chan_range: "start..end"` (specify inclusive channel range)
 - `update_interval: seconds` (specify the update interval for `sensor` and `binary_sensor`, default 30s)
 
+## Optional capabilities
+
+Select these entities under **Configure**; existing entity selections are unchanged.
+
+Optional watchdog entities are `watchdog_reload_1`, `watchdog_count_1`,
+`watchdog_period_1`, and `watchdog_initial_1`.
+
+Watchdog entities are opt-in. Reloading may enable the watchdog; without a reliable reload automation it can power-cycle the Raspberry Pi. Set a suitable initial period for boot time. The integration does not reload it automatically.
+
 ## Testing
 
 With Python 3.14, install `homeassistant==2026.11.1`,
