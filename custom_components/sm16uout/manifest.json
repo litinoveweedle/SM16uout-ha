@@ -1,14 +1,15 @@
 {
   "domain": "sm16uout",
-  "name": "Sequent Microsystems Sixteen 0-10V Analog Outputs Integration",
-  "after_dependencies": [],
+  "name": "Sequent Microsystems Sixteen 0-10V Analog Outputs Card",
+  "categories": [
+    "diy_makers.boards_hardware"
+  ],
   "codeowners": ["@3lv", "@litinoveweedle"],
   "config_flow": true,
-  "dependencies": [],
   "documentation": "https://github.com/SequentMicrosystems/SM16uout-ha",
   "integration_type": "device",
   "iot_class": "local_polling",
-  "issue_tracker": "https://github.com/SequentMicrosystems/SM16uout-ha",
+  "issue_tracker": "https://github.com/SequentMicrosystems/SM16uout-ha/issues",
   "requirements": ["SM16uout>=1.0.3", "SMcommonHA>=0.0.3"],
   "version": "1.0.0"
 }
